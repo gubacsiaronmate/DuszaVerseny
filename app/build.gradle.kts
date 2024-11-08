@@ -10,6 +10,7 @@ android {
     defaultConfig {
         applicationId = "com.gubo.duszaverseny"
         minSdk = 31
+        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
