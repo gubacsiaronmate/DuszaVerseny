@@ -26,6 +26,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+// hey this is a preview
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
