@@ -30,7 +30,7 @@ class EmailSenderService(private val to: String, private val subject: String, pr
             val properties = Properties()
             properties["mail.smtp.auth"] = "true"
             properties["mail.smtp.starttls.enable"] = "true"
-            properties["mail.smtp.host"] = "smtp.google.com"
+            properties["mail.smtp.host"] = "smtp.gmail.com"
             properties["mail.smtp.port"] = 587
             properties["mail.debug"] = "true"
             properties["mail.username"] = "deb.devs.info@gmail.com"
