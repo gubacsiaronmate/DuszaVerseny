@@ -1,6 +1,6 @@
 [versions]
 #noinspection AndroidGradlePluginVersion
-agp = "8.6.0-alpha07"
+agp = "8.6.1"
 androidMail = "1.6.7"
 kotlin = "2.0.0"
 coreKtx = "1.15.0"
