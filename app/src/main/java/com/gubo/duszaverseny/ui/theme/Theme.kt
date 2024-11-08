@@ -12,7 +12,7 @@ fun Theme(content: @Composable () -> Unit) {
 }
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Color(0xFF0077B6),
+    primary = darkPrimary,
     secondary = Color(0xFF00B4D8),
     tertiary = Color(0xFF90E0EF),
     background = Color(0xFF03045E),
