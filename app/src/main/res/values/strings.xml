@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Dusza VersenyPortál</string>
+    <string name="landing_page_title">VERSENY JELENTKEZÉSI FELÜLET</string>
+    <string name="selector">Válasszon platformot</string>
+    <string name="versenyzoi">Versenyzői felület</string>
+    <string name="szervezoi">Szervezői felület</string>
+    <string name="iskolai">Iskolai felület</string>
 </resources>

@@ -1,9 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.DuszaVerseny" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <!-- Light theme -->
+    <style name="Base.Theme.DuszaVerseny" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#03045E</item>
+        <item name="colorPrimaryVariant">#023E8A</item>
+        <item name="colorSecondary">#0077B6</item>
+        <item name="colorSecondaryVariant">#0096C7</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSurface">#48CAE4</item>
+        <item name="colorOnBackground">#FFFFFF</item>
     </style>
-
-    <style name="Theme.DuszaVerseny" parent="Base.Theme.DuszaVerseny" />
 </resources>
