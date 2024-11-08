@@ -44,6 +44,20 @@ android {
 
 dependencies {
     kapt(libs.compiler)
+    implementation(libs.exposed.core)
+    implementation(libs.exposed.crypt)
+    implementation(libs.exposed.dao)
+    implementation(libs.exposed.jdbc)
+    implementation(libs.exposed.kotlin.datetime)
+    implementation(libs.exposed.json)
+    implementation(libs.exposed.money)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.android.mail)
+    implementation(libs.thymeleaf)
+    implementation(libs.androidx.runtime.livedata)
+
+    // generated imports:
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
