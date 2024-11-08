@@ -6,6 +6,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
+@Composable
+fun Theme(content: @Composable () -> Unit) {
+    DuszaVersenyTheme(content = content)
+}
+
 private val DarkColorScheme = darkColorScheme(
     primary = Color(0xFF0077B6),
     secondary = Color(0xFF00B4D8),
