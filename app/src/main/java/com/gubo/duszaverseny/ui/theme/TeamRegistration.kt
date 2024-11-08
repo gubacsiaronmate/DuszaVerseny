@@ -15,6 +15,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import com.gubo.duszaverseny.mail.EmailSenderService
+import kotlinx.coroutines.launch
 
 @Composable
 fun TeamRegistrationScreen() {
@@ -33,6 +35,8 @@ fun TeamRegistrationScreen() {
     var coachName by remember { mutableStateOf("") }
     var selectedCategory by remember { mutableStateOf("") }
     var selectedLanguage by remember { mutableStateOf("") }
+
+    val coroutineScope = rememberCoroutineScope()
 
     LazyColumn(
         modifier = Modifier
@@ -199,7 +203,17 @@ fun TeamRegistrationScreen() {
         item {
             Column {
                 Button(
-                    onClick = { /* Handle form submission */ },
+                    onClick = {
+                        val emailSenderService = EmailSenderService(
+                            "g.aronmate99@gmail.com",
+                            "email Code",
+                            "emailTemplate",
+                            mapOf("code" to 598743)
+                        )
+                        coroutineScope.launch {
+                            emailSenderService.sendEmail()
+                        }
+                    },
                     modifier = Modifier.align(Alignment.CenterHorizontally)
                 ) {
                     Text("Submit Registration")
