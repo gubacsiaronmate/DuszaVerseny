@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/landingDropdown">
+    <item android:title="@string/versenyzoi"/>
+    <item android:title="@string/szervezoi"/>
+    <item android:title="@string/iskolai"/>
+</menu>
+
