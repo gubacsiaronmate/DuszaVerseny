@@ -2,9 +2,8 @@ package com.gubo.duszaverseny.database
 
 import org.jetbrains.exposed.sql.Table
 
-object Student: Table("Student") {
+object Teachers: Table("Teacher") {
     val id = integer("id").autoIncrement()
-    val grade = integer("grade")
-    val pName = varchar("pName", 255)
+    val tName = varchar("tName", 255)
     override val primaryKey = PrimaryKey(id)
 }

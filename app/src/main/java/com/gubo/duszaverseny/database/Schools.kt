@@ -2,7 +2,7 @@ package com.gubo.duszaverseny.database
 
 import org.jetbrains.exposed.sql.Table
 
-object School: Table("School") {
+object Schools: Table("School") {
     val id = integer("id").autoIncrement()
     val schoolName = varchar("schoolName", 255)
     val schoolAddress = varchar("schoolAddress", 255)
