@@ -2,20 +2,20 @@ package com.gubo.duszaverseny.util
 
 import kotlin.reflect.KClass
 
-inline infix fun <reified T : Any> Any.convertTo(targetType: KClass<T>): Any = when (targetType) {
-    Boolean::class -> toBooleanConversion()
-    Byte::class -> toByteConversion()
-    Short::class -> toShortConversion()
-    Int::class -> toIntConversion()
-    Long::class -> toLongConversion()
-    Float::class -> toFloatConversion()
-    Double::class -> toDoubleConversion()
-    Char::class -> toCharConversion()
-    String::class -> toStringConversion()
-    List::class -> toListConversion()
-    Array::class -> toArrayConversion()
-    Set::class -> toSetConversion()
-    Map::class -> toMapConversion()
+inline infix fun <reified T : Any> Any.convertTo(targetType: KClass<T>): T = when (targetType) {
+    Boolean::class -> toBooleanConversion() as T
+    Byte::class -> toByteConversion() as T
+    Short::class -> toShortConversion() as T
+    Int::class -> toIntConversion() as T
+    Long::class -> toLongConversion() as T
+    Float::class -> toFloatConversion() as T
+    Double::class -> toDoubleConversion() as T
+    Char::class -> toCharConversion() as T
+    String::class -> toStringConversion() as T
+    List::class -> toListConversion() as T
+    Array::class -> toArrayConversion() as T
+    Set::class -> toSetConversion() as T
+    Map::class -> toMapConversion() as T
     else -> throw ClassCastException("Unsupported type: $targetType")
 }
 

@@ -1,109 +1,60 @@
 package com.gubo.duszaverseny.viewModels
 
+import android.content.Context
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.gubo.duszaverseny.R
-import com.gubo.duszaverseny.VersenyzoiRegisterActivity
+import com.gubo.duszaverseny.data.Student
+import com.gubo.duszaverseny.repositories.getStudents
+import com.gubo.duszaverseny.util.convertTo
 
 class VersenyzoiRegisterViewModel : ViewModel() {
-    private val context = VersenyzoiRegisterActivity()
-    
-    private fun getTeamMateDataUIGenerator1(): LinearLayout {
+    private val _versenyzok = MutableLiveData<MutableList<Student>>()
+    val versenyzok: MutableLiveData<MutableList<Student>> = _versenyzok
+
+    private fun createLinearLayout(context: Context, imageRes: Int, hintRes: Int): LinearLayout {
+        val nameEditTextId = View.generateViewId()
+        val gradeEditTextId = View.generateViewId()
+
         return LinearLayout(context).apply {
-            orientation = LinearLayout.VERTICAL
-
-            addView(LinearLayout(context).apply {
-                orientation = LinearLayout.HORIZONTAL
-                setPadding(12, 12, 12, 12)
-                addView(ImageView(context).apply {
-                    setImageResource(R.drawable.user)
-                })
-                addView(EditText(context).apply {
-                    R.id.versenyzoName1 = View.generateViewId()
-                    id = R.id.versenyzoName1
-                    hint = R.string.versenyzoName.toString()
-                })
+            orientation = LinearLayout.HORIZONTAL
+            setPadding(12, 12, 12, 12)
+            addView(ImageView(context).apply {
+                setImageResource(imageRes)
             })
-
-            addView(LinearLayout(context).apply {
-                orientation = LinearLayout.HORIZONTAL
-                setPadding(12, 12, 12, 12)
-                addView(ImageView(context).apply {
-                    setImageResource(R.drawable.school2)
-                })
-                addView(EditText(context).apply {
-                    R.id.versenyzoName1 = View.generateViewId()
-                    id = R.id.versenyzoName1
-                    hint = R.string.versenyzoGrade.toString()
-                })
+            addView(EditText(context).apply {
+                id = nameEditTextId
+                hint = context.getString(hintRes)
+            })
+            addView(EditText(context).apply {
+                id = gradeEditTextId
+                hint = context.getString(R.string.versenyzoGrade)
+            })
+            addView(Button(context).apply {
+                text = context.getString(R.string.submit_btn)
+                setOnClickListener {
+                    _versenyzok.value?.add(
+                        Student(
+                            getStudents().last().id + 1,
+                            findViewById<EditText>(nameEditTextId).text.toString(),
+                            findViewById<EditText>(gradeEditTextId).text convertTo Int::class
+                        )
+                    )
+                }
             })
         }
     }
 
-    private fun getTeamMateDataUIGenerator2(): LinearLayout {
+    fun getTeamMateDataUIGenerator(context: Context): LinearLayout {
         return LinearLayout(context).apply {
             orientation = LinearLayout.VERTICAL
-
-            addView(LinearLayout(context).apply {
-                orientation = LinearLayout.HORIZONTAL
-                setPadding(12, 12, 12, 12)
-                addView(ImageView(context).apply {
-                    setImageResource(R.drawable.user)
-                })
-                addView(EditText(context).apply {
-                    R.id.versenyzoName2 = View.generateViewId()
-                    id = R.id.versenyzoName2
-                    hint = R.string.versenyzoName.toString()
-                })
-            })
-
-            addView(LinearLayout(context).apply {
-                orientation = LinearLayout.HORIZONTAL
-                setPadding(12, 12, 12, 12)
-                addView(ImageView(context).apply {
-                    setImageResource(R.drawable.school2)
-                })
-                addView(EditText(context).apply {
-                    R.id.versenyzoName3 = View.generateViewId()
-                    id = R.id.versenyzoName3
-                    hint = R.string.versenyzoGrade.toString()
-                })
-            })
-        }
-    }
-
-    private fun getTeamMateDataUIGenerator3(): LinearLayout {
-        return LinearLayout(context).apply {
-            orientation = LinearLayout.VERTICAL
-
-            addView(LinearLayout(context).apply {
-                orientation = LinearLayout.HORIZONTAL
-                setPadding(12, 12, 12, 12)
-                addView(ImageView(context).apply {
-                    setImageResource(R.drawable.user)
-                })
-                addView(EditText(context).apply {
-                    R.id.versenyzoName1 = View.generateViewId()
-                    id = R.id.versenyzoName1
-                    hint = R.string.versenyzoName.toString()
-                })
-            })
-
-            addView(LinearLayout(context).apply {
-                orientation = LinearLayout.HORIZONTAL
-                setPadding(12, 12, 12, 12)
-                addView(ImageView(context).apply {
-                    setImageResource(R.drawable.school2)
-                })
-                addView(EditText(context).apply {
-                    R.id.versenyzoName1 = View.generateViewId()
-                    id = R.id.versenyzoName1
-                    hint = R.string.versenyzoGrade.toString()
-                })
-            })
+            addView(createLinearLayout(context, R.drawable.user, R.string.versenyzoName))
+            addView(createLinearLayout(context, R.drawable.school2, R.string.versenyzoGrade))
         }
     }
 }

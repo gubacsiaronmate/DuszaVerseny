@@ -1,6 +1,7 @@
 package com.gubo.duszaverseny
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +26,20 @@ class VersenyzoiRegisterActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        R.id.versenyzoName1 = View.generateViewId()
+        R.id.versenyzoName2 = View.generateViewId()
+        R.id.versenyzoName3 = View.generateViewId()
+
+        R.id.versenyzoGrade1 = View.generateViewId()
+        R.id.versenyzoGrade2 = View.generateViewId()
+        R.id.versenyzoGrade3 = View.generateViewId()
+
+        binding.addTeamMate.setOnClickListener {
+            binding.teamMateBox.addView(
+                viewModel.getTeamMateDataUIGenerator(this)
+            )
         }
     }
 }
