@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="versenyzoName1" type="id"/>
+    <item name="versenyzoGrade1" type="id"/>
+    <item name="versenyzoName2" type="id"/>
+    <item name="versenyzoGrade2" type="id"/>
+    <item name="versenyzoName3" type="id"/>
+    <item name="versenyzoGrade3" type="id"/>
+</resources>
