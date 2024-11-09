@@ -7,4 +7,6 @@
     <string name="iskolai">Iskolai felület</string>
     <string name="login">Bejelentkezés</string>
     <string name="register">Regisztráció</string>
+    <string name="felulet">felület</string>
+    <string name="username">Felhasználónév</string>
 </resources>
