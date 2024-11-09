@@ -6,10 +6,66 @@
     <title>Confirmation Email</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 600px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        max-width: 100px;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #007bff;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .code {
+        font-size: 32px;
+        font-weight: bold;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+
+    .message, .signature {
+        color: #6c757d;
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .signature {
+        margin-top: 20px;
+    }
+</style>
+
 <body>
 <div class="container">
     <div class="logo-container">
-        <img src="./images/duszalogo.png" alt="Dusza Logo" class="logo">
+        <img src="duszalogo.png" alt="Dusza Logo" class="logo">
     </div>
     <h1>Your confirmation code:</h1>
     <p class="code" th:text="${code}"></p>
