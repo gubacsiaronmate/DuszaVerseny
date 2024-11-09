@@ -12,7 +12,42 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:textAlignment="center"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nezdmegaz"
+                android:textColor="@color/primaryVariant"
+                android:fontFamily="sans-serif-light"
+                android:textSize="42sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emailed"
+                android:textColor="@color/primaryVariant"
+                android:textStyle="bold"
+                android:textSize="42sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emailkodtext1"
+                android:textColor="@color/primaryVariant"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emailkodtext2"
+                android:textColor="@color/primaryVariant"
+                android:textSize="12sp"/>
+
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -23,37 +58,25 @@
             android:textAlignment="center"
             android:background="@drawable/rounded_box_lnr_blue"
             android:orientation="vertical"
-            android:gravity="center_horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Azonosítás"
-                android:paddingTop="16dp"
-                android:gravity="start"
-                android:textColor="@color/white"
-                />
-
-            <com.gubo.duszaverseny.components.blueCustomButton
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:text="@string/selector"
-                android:layout_marginTop="16dp"
-                />
+            android:gravity="center"
+            >
 
             <com.gubo.duszaverseny.components.whiteCustomEditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:text="@string/login"
+                android:hint="@string/kod"
+                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 />
 
-            <com.gubo.duszaverseny.components.basicCustomButton
-                android:layout_width="wrap_content"
+            <com.gubo.duszaverseny.components.whiteCustomButton
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:text="Vissza a kezdőoldalra"/>
-
+                android:text="@string/submit"
+                android:layout_marginTop="54dp"
+                android:layout_marginBottom="16dp"
+                />
 
         </LinearLayout>
     </RelativeLayout>

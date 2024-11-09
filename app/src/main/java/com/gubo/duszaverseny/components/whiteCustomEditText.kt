@@ -11,8 +11,8 @@ class whiteCustomEditText(context: Context, attrs: AttributeSet):
         setPadding(32, 32, 32, 32)
         background = AppCompatResources.getDrawable(context, R.drawable.rounded_white_button)
         inputType = android.text.InputType.TYPE_CLASS_TEXT
-        textAlignment = TEXT_ALIGNMENT_TEXT_START
-        gravity = android.view.Gravity.START
+        textAlignment = TEXT_ALIGNMENT_CENTER
+        gravity = android.view.Gravity.CENTER
         textSize = 22f
         setTextColor(context.getColor(R.color.primaryVariant))
     }

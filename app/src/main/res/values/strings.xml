@@ -17,4 +17,10 @@
     <string name="pleasesignin">Jelentkezz be</string>
     <string name="back">back arrow</string>
     <string name="arrow_description">Vissza</string>
+    <string name="nezdmegaz">Nézd meg az</string>
+    <string name="emailed">Email-ed\n</string>
+    <string name="emailkodtext1">Emailben kaptál egy kódot,</string>
+    <string name="emailkodtext2">add meg az alábbi mezőben!</string>
+    <string name="kod">Kód</string>
+    <string name="submit">Tovább</string>
 </resources>

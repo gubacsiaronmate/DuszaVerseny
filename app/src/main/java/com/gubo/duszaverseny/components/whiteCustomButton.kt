@@ -6,7 +6,7 @@ import android.widget.LinearLayout.LayoutParams
 import androidx.appcompat.content.res.AppCompatResources
 import com.gubo.duszaverseny.R
 
-class blueCustomButton(context: Context, attrs: AttributeSet):
+class whiteCustomButton(context: Context, attrs: AttributeSet):
     androidx.appcompat.widget.AppCompatButton(context, attrs) {
     init {
         val params = LayoutParams(
@@ -23,6 +23,6 @@ class blueCustomButton(context: Context, attrs: AttributeSet):
         gravity = android.view.Gravity.CENTER
         textSize = 22f
 
-        setTextColor(context.getColor(R.color.white))
+        setTextColor(context.getColor(R.color.primaryVariant))
     }
 }
