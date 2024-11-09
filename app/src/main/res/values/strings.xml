@@ -9,7 +9,7 @@
     <string name="register">Regisztráció</string>
     <string name="felulet">felület</string>
     <string name="username">Felhasználónév</string>
-    <string name="email">E-Mail-cím</string>
+    <string name="email">E-mail cím</string>
     <string name="szul_datum">Születési dátum</string>
     <string name="nem">Férfi / Nő</string>
     <string name="szervezoi_kod">Szervezői kód</string>
@@ -24,7 +24,18 @@
     <string name="kod">Kód</string>
     <string name="submit">Tovább</string>
     <string name="password">Jelszó</string>
+<<<<<<< HEAD
     <string name="szervpanel">Szervezői panel</string>
     <string name="Veresenykezeles">Verseny kezelése</string>
     <string name="prognyelv">Programozási nyelvek</string>
+=======
+    <string name="szervezoi_title">Szervezői</string>
+    <string name="versenyzoi_title">Versenyzői</string>
+    <string name="teamName">Csapatnév</string>
+    <string name="team">team</string>
+    <string name="plus">plus</string>
+    <string name="addTeamMate">Csapattag Hozzáadása</string>
+    <string name="versenyzoName">Versenyző neve</string>
+    <string name="versenyzoGrade">Versenyző évfolyama</string>
+>>>>>>> 98bba2db0b7c8c24a781b4f8dc2e36a5132f70b5
 </resources>
