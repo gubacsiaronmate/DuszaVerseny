@@ -5,4 +5,6 @@
     <string name="versenyzoi">Versenyzői felület</string>
     <string name="szervezoi">Szervezői felület</string>
     <string name="iskolai">Iskolai felület</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="register">Regisztráció</string>
 </resources>

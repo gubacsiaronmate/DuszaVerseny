@@ -39,7 +39,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_box_lnr"
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
@@ -48,13 +48,40 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:padding="20px"
                 android:background="@drawable/rounded_white_button"
+                android:padding="20px"
+                android:textColor="@color/white"
                 android:text="@string/selector"
                 android:textAlignment="center"
-                android:textColor="@color/primaryVariant"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/rounded_white_button"
+                android:padding="20px"
+                android:textColor="@color/white"
+                android:text="@string/login"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_white_button"
+                android:padding="20px"
+                android:textColor="@color/white"
+                android:text="@string/register"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
 
 
 

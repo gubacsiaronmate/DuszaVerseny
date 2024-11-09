@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/rounded_box_lnr_invert"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/ujEsemenyButton"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/back_button"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Szervezői"
+        android:textSize="50sp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="felület"
+        android:textSize="50sp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Üdvözöljük!"
+
+</LinearLayout>
