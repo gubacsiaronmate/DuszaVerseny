@@ -1,6 +1,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.gubo.duszaverseny.viewModels.EmailVerifyViewModel" />
+    </data>
+
     <RelativeLayout
         android:id="@+id/mainEmailVerify"
         android:layout_width="match_parent"
