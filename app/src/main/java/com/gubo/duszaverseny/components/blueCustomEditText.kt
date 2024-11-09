@@ -14,6 +14,6 @@ class blueCustomEditText(context: Context, attrs: AttributeSet):
         textAlignment = TEXT_ALIGNMENT_CENTER
         gravity = android.view.Gravity.CENTER
         textSize = 22f
-        setTextColor(context.getColor(R.color.primaryVariant))
+        setTextColor(context.getColor(R.color.white))
     }
 }

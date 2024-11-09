@@ -25,16 +25,5 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        binding.startButton.setOnClickListener {
-            lifecycleScope.launch {
-                EmailSenderService(
-                    "g.aronmate13@gmail.com",
-                    "Dusza VersenyPortál",
-                    "emailTemplate",
-                    mapOf("code" to 569465)
-                ).sendEmail()
-            }
-        }
     }
 }

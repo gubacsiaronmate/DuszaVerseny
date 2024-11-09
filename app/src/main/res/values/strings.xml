@@ -13,4 +13,6 @@
     <string name="szul_datum">Születési dátum</string>
     <string name="nem">Férfi / Nő</string>
     <string name="szervezoi_kod">Szervezői kód</string>
+    <string name="account_exist">Van már fiókod?</string>
+    <string name="pleasesignin">Jelentkezz be</string>
 </resources>
