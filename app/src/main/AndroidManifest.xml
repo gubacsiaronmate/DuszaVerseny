@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.DuszaVerseny">
         <activity
+            android:name=".SzervezoiFelulet"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
