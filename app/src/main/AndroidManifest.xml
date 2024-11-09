@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.DuszaVerseny">
         <activity
+            android:name=".VersenyzoiRegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".SzervezoiFeluletActivity"
             android:exported="false" />
         <activity
