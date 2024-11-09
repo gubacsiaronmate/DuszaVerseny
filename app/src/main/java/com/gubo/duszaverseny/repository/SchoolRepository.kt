@@ -2,8 +2,12 @@ package com.gubo.duszaverseny.repository
 
 import com.gubo.duszaverseny.data.School
 import com.gubo.duszaverseny.database.Schools
+import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
+import org.jetbrains.exposed.sql.deleteWhere
+import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
+import org.jetbrains.exposed.sql.update
 
 fun getSchools(): List<School> = transaction{
     val schools = Schools.selectAll()
@@ -27,4 +31,24 @@ fun getSchoolById(id: Int): School? = transaction {
             schoolUserName = school[Schools.schoolUserName]
         )
     } else null
+}
+
+fun modifySchool(school: School) = transaction {
+    Schools.update({ Schools.id eq school.id }) {
+        it[schoolName] = school.schoolName
+        it[schoolAddress] = school.schoolAddress
+        it[schoolUserName] = school.schoolUserName
+    }
+}
+
+fun deleteSchool(id: Int) = transaction {
+    Schools.deleteWhere { Schools.id eq id }
+}
+
+fun addSchool(school: School) = transaction {
+    Schools.insert {
+        it[schoolName] = school.schoolName
+        it[schoolAddress] = school.schoolAddress
+        it[schoolUserName] = school.schoolUserName
+    }
 }

@@ -2,8 +2,12 @@ package com.gubo.duszaverseny.repository
 
 import com.gubo.duszaverseny.data.Student
 import com.gubo.duszaverseny.database.Students
+import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
+import org.jetbrains.exposed.sql.deleteWhere
+import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
+import org.jetbrains.exposed.sql.update
 
 fun getStudents(): List<Student> = transaction{
     val students = Students.selectAll()
@@ -25,4 +29,22 @@ fun getStudentById(id: Int): Student? = transaction{
             grade = student[Students.grade]
         )
     } else null
+}
+
+fun modifyStudent(student: Student) = transaction {
+    Students.update({ Students.id eq student.id }) {
+        it[sName] = student.sName
+        it[grade] = student.grade
+    }
+}
+
+fun deleteStudent(id: Int) = transaction {
+    Students.deleteWhere { Students.id eq id }
+}
+
+fun addStudent(student: Student) = transaction {
+    Students.insert {
+        it[sName] = student.sName
+        it[grade] = student.grade
+    }
 }
