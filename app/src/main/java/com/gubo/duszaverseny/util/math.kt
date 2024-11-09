@@ -1,4 +1,4 @@
-package com.gubo.util
+package com.gubo.duszaverseny.util
 
 import kotlin.math.pow
 import kotlin.math.round

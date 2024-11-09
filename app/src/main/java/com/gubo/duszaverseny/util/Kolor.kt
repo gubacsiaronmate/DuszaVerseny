@@ -1,4 +1,6 @@
-package util
+package com.gubo.duszaverseny.util
+
+import util.Color
 
 /**
  * Object to add color information to strings

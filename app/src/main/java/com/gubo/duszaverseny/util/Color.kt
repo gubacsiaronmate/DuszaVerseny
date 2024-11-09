@@ -1,6 +1,6 @@
 package util
 
-import util.Kolor.ESCAPE
+import com.gubo.duszaverseny.util.Kolor.ESCAPE
 
 /**
  * The amount of codes required in order to jump from a foreground code to a background code. Equal to 10. For example,

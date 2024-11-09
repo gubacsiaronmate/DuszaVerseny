@@ -1,4 +1,4 @@
-package com.gubo.util
+package com.gubo.duszaverseny.util
 
 fun List<Int>.toMultiple(): Int {
     var sum = 1

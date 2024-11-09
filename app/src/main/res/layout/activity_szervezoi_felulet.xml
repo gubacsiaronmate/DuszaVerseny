@@ -58,76 +58,32 @@
         <com.gubo.duszaverseny.components.CustomEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/username"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:paddingVertical="10dp"
             android:hint="@string/username"
-            android:background="@drawable/rounded_blue_button"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="22sp"
-            android:textColor="@color/primaryVariant" />
+            />
 
-        <EditText
+        <com.gubo.duszaverseny.components.CustomEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/email"
-            android:background="@drawable/rounded_blue_button"
-            android:inputType="textEmailAddress"
-            android:layout_marginBottom="16dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="22sp"
-            android:textColor="@color/primaryVariant" />
+            android:layout_height="match_parent"
+            android:hint="@string/username"
+            />
 
-        <TextView
+        <com.gubo.duszaverseny.components.CustomEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawable="@drawable/rounded_white_button"
-            android:layout_marginBottom="16dp"
-            android:text="@string/email"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="22sp"
-            android:textColor="@color/primaryVariant" />
+            android:layout_height="match_parent"
+            android:hint="@string/username"
+            />
 
-        <TextView
+        <com.gubo.duszaverseny.components.CustomEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawable="@drawable/rounded_white_button"
-            android:layout_marginBottom="16dp"
-            android:text="@string/szul_datum"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="22sp"
-            android:textColor="@color/primaryVariant" />
+            android:layout_height="match_parent"
+            android:hint="@string/username"
+            />
 
-        <TextView
+        <com.gubo.duszaverseny.components.CustomEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawable="@drawable/rounded_white_button"
-            android:layout_marginBottom="16dp"
-            android:text="@string/nem"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="22sp"
-            android:textColor="@color/primaryVariant" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawable="@drawable/rounded_white_button"
-            android:layout_marginBottom="16dp"
-            android:text="@string/szervezoi_kod"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="22sp"
-            android:textColor="@color/primaryVariant" />
+            android:layout_height="match_parent"
+            android:hint="@string/username"
+            />
 
 
 

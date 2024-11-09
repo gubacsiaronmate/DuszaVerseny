@@ -1,8 +1,6 @@
-package com.gubo.util
+package com.gubo.duszaverseny.util
 
 import util.Color
-import util.Kolor
-import util.lightWhiteBackground
 
 fun input (prompt: Any): Any {
     print(prompt)

@@ -1,4 +1,6 @@
-package util
+package com.gubo.duszaverseny.util
+
+import util.Color
 
 /**
  * Extension functions to get colored strings
