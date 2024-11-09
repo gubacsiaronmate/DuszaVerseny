@@ -8,7 +8,7 @@ import com.gubo.duszaverseny.R
 class whiteCustomEditText(context: Context, attrs: AttributeSet):
     androidx.appcompat.widget.AppCompatEditText(context, attrs) {
     init {
-        setPadding(16, 16, 16, 16)
+        setPadding(32, 32, 32, 32)
         background = AppCompatResources.getDrawable(context, R.drawable.rounded_white_button)
         inputType = android.text.InputType.TYPE_CLASS_TEXT
         textAlignment = TEXT_ALIGNMENT_TEXT_START
