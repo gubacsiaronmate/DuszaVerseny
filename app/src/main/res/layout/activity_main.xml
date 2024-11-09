@@ -1,6 +1,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.gubo.duszaverseny.viewModels.MainViewModel" />
+    </data>
 
     <RelativeLayout
         android:id="@+id/main"

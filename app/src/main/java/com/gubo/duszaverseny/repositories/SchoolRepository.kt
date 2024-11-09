@@ -1,4 +1,4 @@
-package com.gubo.duszaverseny.repository
+package com.gubo.duszaverseny.repositories
 
 import com.gubo.duszaverseny.data.School
 import com.gubo.duszaverseny.database.Schools
