@@ -106,33 +106,27 @@
                         android:orientation="vertical"
                         android:gravity="center">
 
-                        <!-- First element: Programming language -->
-
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:textAlignment="center"
                             android:background="@drawable/white_box"
-                            android:padding="6px">
+                            android:padding="6dp">
 
                             <TextView
                                 android:id="@+id/languageText"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Kotlin"
                                 android:textSize="18sp"
                                 android:textColor="@color/primaryVariant"
-                                android:background="#FFFFFF"
-                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:layout_marginEnd="8dp" />
 
-                                android:layout_marginEnd="8dp"
-                                />
                         </LinearLayout>
 
-                        <!-- Placeholder for dynamic elements -->
                         <LinearLayout
                             android:id="@+id/placeholderLayout"
                             android:layout_width="match_parent"
@@ -140,10 +134,8 @@
                             android:orientation="vertical"
                             android:gravity="center"
                             android:layout_marginBottom="16dp">
-                            <!-- This area will be dynamically populated with additional elements -->
                         </LinearLayout>
 
-                        <!-- Example of a Button to add more elements -->
                         <Button
                             android:id="@+id/addElementButton"
                             android:layout_width="wrap_content"
@@ -153,9 +145,60 @@
 
                     </LinearLayout>
                 </androidx.core.widget.NestedScrollView>
-
             </LinearLayout>
 
+            <View
+                android:layout_width="350dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="32dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="6dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="start"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/category2"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/katergoria"
+                        android:textAlignment="textStart"
+                        android:textSize="16dp"
+                        android:textColor="@color/primaryVariant"
+                        android:gravity="start"
+                        android:layout_marginStart="10dp"
+                        android:background="@null"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </layout>

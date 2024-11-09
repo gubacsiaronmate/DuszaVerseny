@@ -24,11 +24,9 @@
     <string name="kod">Kód</string>
     <string name="submit">Tovább</string>
     <string name="password">Jelszó</string>
-<<<<<<< HEAD
     <string name="szervpanel">Szervezői panel</string>
     <string name="Veresenykezeles">Verseny kezelése</string>
     <string name="prognyelv">Programozási nyelvek</string>
-=======
     <string name="szervezoi_title">Szervezői</string>
     <string name="versenyzoi_title">Versenyzői</string>
     <string name="teamName">Csapatnév</string>
@@ -37,5 +35,6 @@
     <string name="addTeamMate">Csapattag Hozzáadása</string>
     <string name="versenyzoName">Versenyző neve</string>
     <string name="versenyzoGrade">Versenyző évfolyama</string>
->>>>>>> 98bba2db0b7c8c24a781b4f8dc2e36a5132f70b5
+    <string name="delete_button_description">Törlés</string>
+    <string name="katergoria">Kategóriák</string>
 </resources>
