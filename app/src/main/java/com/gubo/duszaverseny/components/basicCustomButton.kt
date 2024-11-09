@@ -10,6 +10,6 @@ class basicCustomButton(context: Context, attrs: AttributeSet) :
         setBackgroundColor(context.getColor(R.color.white))
         setTextColor(context.getColor(R.color.primaryVariant))
         textAlignment = TEXT_ALIGNMENT_CENTER
-        textSize = 8f
+        textSize = 12f
     }
 }

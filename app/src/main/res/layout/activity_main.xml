@@ -49,12 +49,37 @@
             android:gravity="center_horizontal">
 
 
-            <com.gubo.duszaverseny.components.blueCustomButton
-                android:layout_width="300dp"
+            <LinearLayout
+                android:id="@+id/selector"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/selector"
-                android:layout_marginVertical="16dp"
-            />
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/rounded_white_button"
+                android:layout_marginTop="32dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/selector"
+                    android:textColor="@color/primaryVariant"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/downarrow"
+                    android:layout_marginEnd="16dp"
+                    />
+            </LinearLayout>
+
+
+
 
             <com.gubo.duszaverseny.components.blueCustomButton
                 android:layout_width="300dp"

@@ -23,4 +23,5 @@
     <string name="emailkodtext2">add meg az alábbi mezőben!</string>
     <string name="kod">Kód</string>
     <string name="submit">Tovább</string>
+    <string name="password">Jelszó</string>
 </resources>
