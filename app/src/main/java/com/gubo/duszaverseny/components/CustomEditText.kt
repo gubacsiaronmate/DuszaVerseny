@@ -2,7 +2,6 @@ package com.gubo.duszaverseny.components
 
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.LinearLayout.LayoutParams
 import androidx.appcompat.content.res.AppCompatResources
 import com.gubo.duszaverseny.R
 
