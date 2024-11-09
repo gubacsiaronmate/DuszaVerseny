@@ -9,14 +9,153 @@
             type="com.gubo.duszaverseny.viewModels.SzervezoiFeluletViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/mainSzervezoiFelulet"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".SzervezoiFeluletActivity">
 
+        <com.gubo.duszaverseny.components.backButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="16dp"
+            tools:ignore="MissingClass"
+            />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/szervpanel"
+            android:textSize="30sp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/primaryVariant"
+            android:textStyle="bold"
+            />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Veresenykezeles"
+                android:textSize="24dp"
+                android:textColor="@color/primaryVariant"
+                android:layout_marginStart="36dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="32dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="6dp"
+                    android:gravity="start"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/programming"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/prognyelv"
+                        android:textAlignment="textStart"
+                        android:textSize="16dp"
+                        android:textColor="@color/primaryVariant"
+                        android:gravity="start"
+                        android:layout_marginStart="10dp"
+                        android:background="@null"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:drawable="@drawable/blue_box"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+
+                <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    android:background="@drawable/blue_box"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <!-- First element: Programming language -->
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:background="@drawable/white_box"
+                            android:padding="6px">
+
+                            <TextView
+                                android:id="@+id/languageText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Kotlin"
+                                android:textSize="18sp"
+                                android:textColor="@color/primaryVariant"
+                                android:background="#FFFFFF"
+                                android:textAlignment="center"
+
+                                android:layout_marginEnd="8dp"
+                                />
+                        </LinearLayout>
+
+                        <!-- Placeholder for dynamic elements -->
+                        <LinearLayout
+                            android:id="@+id/placeholderLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginBottom="16dp">
+                            <!-- This area will be dynamically populated with additional elements -->
+                        </LinearLayout>
+
+                        <!-- Example of a Button to add more elements -->
+                        <Button
+                            android:id="@+id/addElementButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add Element"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 </layout>
-

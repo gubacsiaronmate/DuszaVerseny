@@ -6,7 +6,7 @@ import androidx.appcompat.widget.AppCompatImageButton
 import androidx.appcompat.content.res.AppCompatResources
 import com.gubo.duszaverseny.R
 
-class BackButton(context: Context, attrs: AttributeSet) :
+class backButton(context: Context, attrs: AttributeSet) :
     AppCompatImageButton(context, attrs) {
 
     init {

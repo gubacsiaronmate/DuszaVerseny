@@ -24,4 +24,7 @@
     <string name="kod">Kód</string>
     <string name="submit">Tovább</string>
     <string name="password">Jelszó</string>
+    <string name="szervpanel">Szervezői panel</string>
+    <string name="Veresenykezeles">Verseny kezelése</string>
+    <string name="prognyelv">Programozási nyelvek</string>
 </resources>
