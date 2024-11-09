@@ -3,9 +3,9 @@ package com.gubo.duszaverseny
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.gubo.duszaverseny.database.configureDatabase
 import com.gubo.duszaverseny.databinding.ActivityMainBinding
 import com.gubo.duszaverseny.mail.EmailSenderService
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.startButton.setOnClickListener {
-            rememberCoroutineScope().launch {
+            lifecycleScope.launch {
                 EmailSenderService(
                     "g.aronmate99@gmail.com",
                     "Nigga",

@@ -11,7 +11,7 @@ class DropdownHelper {
 
         // Inflate the menu with options
         val inflater = popupMenu.menuInflater
-        inflater.inflate(R.menu.landingDropdown, popupMenu.menu)
+        inflater.inflate(R.menu.landing_dropdown, popupMenu.menu)
 
         // Handle item clicks in the dropdown
         popupMenu.setOnMenuItemClickListener { item: MenuItem ->
