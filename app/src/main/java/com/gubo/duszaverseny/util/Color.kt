@@ -1,4 +1,4 @@
-package util
+package com.gubo.duszaverseny.util
 
 import com.gubo.duszaverseny.util.Kolor.ESCAPE
 

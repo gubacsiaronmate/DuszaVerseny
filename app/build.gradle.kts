@@ -50,6 +50,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.jbcrypt)
     implementation(libs.mysql.connector.java)
     implementation(libs.exposed.core)
     implementation(libs.exposed.crypt)

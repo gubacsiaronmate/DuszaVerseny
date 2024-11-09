@@ -1,7 +1,5 @@
 package com.gubo.duszaverseny.util
 
-import util.Color
-
 fun input (prompt: Any): Any {
     print(prompt)
     return readln()

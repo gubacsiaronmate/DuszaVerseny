@@ -1,5 +1,6 @@
 [versions]
 agp = "8.7.2"
+jbcrypt = "0.4"
 kotlin = "2.0.21"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -31,6 +32,7 @@ exposed-kotlin-datetime = { module = "org.jetbrains.exposed:exposed-kotlin-datet
 exposed-money = { module = "org.jetbrains.exposed:exposed-money", version.ref = "exposed" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "runtimeLivedata" }
+jbcrypt = { module = "org.mindrot:jbcrypt", version.ref = "jbcrypt" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
