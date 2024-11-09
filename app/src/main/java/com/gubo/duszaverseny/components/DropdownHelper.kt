@@ -1,9 +1,10 @@
-package com.gubo.duszaverseny
+package com.gubo.duszaverseny.components
 
 import android.content.Context
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.PopupMenu
+import com.gubo.duszaverseny.R
 
 class DropdownHelper {
     fun showDropdown(context: Context, button: Button) {

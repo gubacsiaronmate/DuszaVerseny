@@ -55,6 +55,11 @@
         android:orientation="vertical"
         >
 
+        <com.gubo.duszaverseny.components.CustomEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/username"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
