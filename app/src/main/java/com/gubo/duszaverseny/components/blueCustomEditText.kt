@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import androidx.appcompat.content.res.AppCompatResources
 import com.gubo.duszaverseny.R
 
-class CustomEditText(context: Context, attrs: AttributeSet):
+class blueCustomEditText(context: Context, attrs: AttributeSet):
     androidx.appcompat.widget.AppCompatEditText(context, attrs) {
     init {
         setPadding(0, 16, 0, 16)
