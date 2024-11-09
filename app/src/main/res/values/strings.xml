@@ -9,4 +9,8 @@
     <string name="register">Regisztráció</string>
     <string name="felulet">felület</string>
     <string name="username">Felhasználónév</string>
+    <string name="email">E-Mail-cím</string>
+    <string name="szul_datum">Születési dátum</string>
+    <string name="nem">Férfi / Nő</string>
+    <string name="szervezoi_kod">Szervezői kód</string>
 </resources>

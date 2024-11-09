@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Light theme -->
     <style name="Base.Theme.DuszaVerseny" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">#03045E</item>
-        <item name="colorPrimaryVariant">#023E8A</item>
+        <item name="colorPrimary">#002855</item>
+        <item name="colorPrimaryVariant">#002855</item>
         <item name="colorSecondary">#0077B6</item>
         <item name="colorSecondaryVariant">#0096C7</item>
         <item name="colorOnPrimary">#FFFFFF</item>
