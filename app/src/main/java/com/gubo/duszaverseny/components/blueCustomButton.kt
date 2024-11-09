@@ -17,12 +17,12 @@ class blueCustomButton(context: Context, attrs: AttributeSet):
         }
         layoutParams = params
 
-        setPadding(20, 20, 20, 20)
+        setPadding(10, 20, 10, 20)
         background = AppCompatResources.getDrawable(context, R.drawable.rounded_blue_button)
         textAlignment = TEXT_ALIGNMENT_CENTER
         gravity = android.view.Gravity.CENTER
-        textSize = 12f
-        typeface = android.graphics.Typeface.DEFAULT_BOLD
+        textSize = 22f
+
         setTextColor(context.getColor(R.color.white))
     }
 }
