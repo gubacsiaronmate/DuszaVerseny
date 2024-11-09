@@ -6,71 +6,15 @@
     <title>Confirmation Email</title>
 </head>
 
-<style>
-    body {
-        background-color: #f8f9fa;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    .container {
-        background-color: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        max-width: 600px;
-        text-align: center;
-        width: 90%;
-    }
-
-    .logo-container {
-        margin-bottom: 20px;
-    }
-
-    .logo {
-        max-width: 100px;
-        border-radius: 8px;
-        padding: 10px;
-        background-color: #007bff;
-    }
-
-    h1 {
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
-
-    .code {
-        font-size: 32px;
-        font-weight: bold;
-        color: #007bff;
-        margin-bottom: 20px;
-    }
-
-    .message, .signature {
-        color: #6c757d;
-        font-size: 14px;
-        margin-top: 0;
-    }
-
-    .signature {
-        margin-top: 20px;
-    }
-</style>
-
-<body>
-<div class="container">
-    <div class="logo-container">
-        <img src="duszalogo.png" alt="Dusza Logo" class="logo"
-        th:attr="src=@{duszalogo.png},alt='Dusza Logo'">
+<body style="background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; font-family: Arial, sans-serif;">
+<div class="container" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; max-width: 600px; text-align: center; width: 90%;">
+    <div class="logo-container" style="margin-bottom: 20px;">
+        <img src="duszalogo.png" alt="Dusza Logo" class="logo" th:attr="src=@{duszalogo.png},alt='Dusza Logo'" style="max-width: 100px; border-radius: 8px; padding: 10px; background-color: #007bff;">
     </div>
-    <h1>Your confirmation code:</h1>
-    <p class="code" th:text="${code}"></p>
-    <p class="message">If you did not request this code, please ignore this email or contact support.</p>
-    <p class="signature">Thank you,<br>DevDevs</p>
+    <h1 style="font-size: 24px; margin-bottom: 15px;">Your confirmation code:</h1>
+    <p class="code" th:text="${code}" style="font-size: 32px; font-weight: bold; color: #007bff; margin-bottom: 20px;"></p>
+    <p class="message" style="color: #6c757d; font-size: 14px; margin-top: 0;">If you did not request this code, please ignore this email or contact support.</p>
+    <p class="signature" style="color: #6c757d; font-size: 14px; margin-top: 20px;">Thank you,<br>DevDevs</p>
 </div>
 </body>
 </html>
