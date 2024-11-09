@@ -55,12 +55,26 @@
         android:orientation="vertical"
         >
 
-        <TextView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawable="@drawable/rounded_white_button"
             android:layout_marginBottom="16dp"
-            android:text="@string/username"
+            android:paddingVertical="10dp"
+            android:hint="@string/username"
+            android:background="@drawable/rounded_blue_button"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="@color/primaryVariant" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:background="@drawable/rounded_blue_button"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="16dp"
             android:textAlignment="center"
             android:gravity="center"
             android:textSize="22sp"
@@ -109,5 +123,10 @@
             android:gravity="center"
             android:textSize="22sp"
             android:textColor="@color/primaryVariant" />
+
+
+
+
+
     </LinearLayout>
 </LinearLayout>
