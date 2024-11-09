@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
         binding.startButton.setOnClickListener {
             lifecycleScope.launch {
                 EmailSenderService(
-                    "g.aronmate99@gmail.com",
-                    "Nigga",
+                    "g.aronmate13@gmail.com",
+                    "Dusza VersenyPortál",
                     "emailTemplate",
                     mapOf("code" to 569465)
                 ).sendEmail()
