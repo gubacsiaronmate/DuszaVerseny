@@ -60,7 +60,7 @@
                     android:orientation="horizontal"
                     android:padding="6dp"
                     android:gravity="start"
-                    >
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="24dp"
@@ -125,6 +125,13 @@
                                 android:gravity="center"
                                 android:layout_marginEnd="8dp" />
 
+                            <com.gubo.duszaverseny.components.deleteButton
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="center">
+
+                            </com.gubo.duszaverseny.components.deleteButton>
+
                         </LinearLayout>
 
                         <LinearLayout
@@ -156,10 +163,11 @@
                 />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginStart="32dp"
+                android:layout_marginHorizontal="32dp"
+                android:padding="12dp"
                 >
 
                 <LinearLayout
@@ -191,13 +199,86 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/blue_box"
+                    >
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="350dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="32dp"
+                android:padding="12dp"
+                >
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="6dp">
+                    android:orientation="horizontal"
+                    android:padding="6dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="start"
+                    >
 
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/date2"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/jelhatido"
+                        android:textAlignment="textStart"
+                        android:textSize="16dp"
+                        android:textColor="@color/primaryVariant"
+                        android:gravity="start"
+                        android:layout_marginStart="10dp"
+                        android:background="@null"
+                        />
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/blue_box"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Határidő: "
+                        android:textSize="16dp"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="date"
+                        android:textSize="16dp"
+                        android:textColor="@color/white"/>
+
+
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

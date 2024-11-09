@@ -37,4 +37,5 @@
     <string name="versenyzoGrade">Versenyző évfolyama</string>
     <string name="delete_button_description">Törlés</string>
     <string name="katergoria">Kategóriák</string>
+    <string name="jelhatido">Jelentkezési Határidő</string>
 </resources>
