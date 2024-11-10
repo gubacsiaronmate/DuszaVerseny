@@ -16,7 +16,7 @@
         android:orientation="vertical"
         tools:context=".SzervezoiFeluletActivity">
 
-        <com.gubo.duszaverseny.components.BackButton
+        <com.gubo.duszaverseny.components.InverseBackButton
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_margin="16dp"
@@ -125,12 +125,12 @@
                                 android:gravity="center"
                                 android:layout_marginEnd="8dp" />
 
-                            <com.gubo.duszaverseny.components.DeleteButton
+                            <com.gubo.duszaverseny.components.deleteButton
                                 android:layout_width="16dp"
                                 android:layout_height="16dp"
                                 android:layout_gravity="center">
 
-                            </com.gubo.duszaverseny.components.DeleteButton>
+                            </com.gubo.duszaverseny.components.deleteButton>
 
                         </LinearLayout>
 
@@ -155,7 +155,8 @@
             </LinearLayout>
 
             <View
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="16dp"
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"
                 android:layout_marginTop="8dp"
@@ -210,7 +211,8 @@
             </LinearLayout>
 
             <View
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="16dp"
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"
                 android:layout_marginTop="8dp"
@@ -257,8 +259,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:orientation="horizontal"
-                    android:gravity="center"
+                    android:gravity="center_vertical"
                     android:layout_gravity="center"
+                    android:paddingStart="16dp"
                     android:background="@drawable/blue_box"
                     >
 
@@ -274,7 +277,30 @@
                         android:layout_height="wrap_content"
                         android:text="date"
                         android:textSize="16dp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:layout_marginEnd="32dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="end"
+                        android:paddingEnd="16dp"
+                        android:layout_gravity="center">
+
+                        <com.gubo.duszaverseny.components.DeleteButton
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="16dp"
+                            />
+
+                        <com.gubo.duszaverseny.components.ModifyButton
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
 
 
 

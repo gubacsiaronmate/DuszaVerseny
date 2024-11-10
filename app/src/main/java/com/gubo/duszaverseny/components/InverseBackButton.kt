@@ -6,12 +6,12 @@ import androidx.appcompat.widget.AppCompatImageButton
 import androidx.appcompat.content.res.AppCompatResources
 import com.gubo.duszaverseny.R
 
-class BackButton(context: Context, attrs: AttributeSet) :
+class InverseBackButton(context: Context, attrs: AttributeSet) :
     AppCompatImageButton(context, attrs) {
 
     init {
-        setImageDrawable(AppCompatResources.getDrawable(context, R.drawable.backarrow2))
-        background = AppCompatResources.getDrawable(context, R.drawable.white_circle)
+        setImageDrawable(AppCompatResources.getDrawable(context, R.drawable.backarrow))
+        background = AppCompatResources.getDrawable(context, R.drawable.blue_circle)
         setPadding(16, 16, 16, 16)
         scaleType = ScaleType.CENTER
         contentDescription = context.getString(R.string.arrow_description)
