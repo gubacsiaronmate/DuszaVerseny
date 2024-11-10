@@ -6,7 +6,7 @@ import android.widget.LinearLayout.LayoutParams
 import androidx.appcompat.content.res.AppCompatResources
 import com.gubo.duszaverseny.R
 
-class BlueCustomButton(context: Context, attrs: AttributeSet):
+class BlueCustomButton(context: Context, attrs: AttributeSet? = null):
     androidx.appcompat.widget.AppCompatButton(context, attrs) {
     init {
         val params = LayoutParams(

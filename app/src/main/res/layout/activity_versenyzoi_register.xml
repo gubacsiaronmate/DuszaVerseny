@@ -9,6 +9,7 @@
     </data>
 
     <LinearLayout
+        android:background="@color/white"
         android:id="@+id/mainVersenyzoiRegister"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -137,6 +138,7 @@
 
             <LinearLayout
                 android:id="@+id/addTeamMate"
+                android:layout_marginBottom="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -158,7 +160,41 @@
                     android:text="@string/addTeamMate"/>
 
             </LinearLayout>
+        </LinearLayout>
 
+        <com.gubo.duszaverseny.components.BlueCustomButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="100dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/account_exist"
+                android:layout_marginHorizontal="16dp"
+                android:gravity="center"
+                android:textColor="@color/primaryVariant"/>
+
+            <com.gubo.duszaverseny.components.BasicCustomButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stateListAnimator="@null"
+                android:textSize="24sp"
+                android:text="@string/pleasesignin"
+                android:textColor="@color/primaryVariant"
+                />
         </LinearLayout>
 
     </LinearLayout>
