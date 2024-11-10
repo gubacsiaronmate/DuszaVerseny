@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical"
     android:id="@+id/mainSzervezoiRegister"
-    tools:context=".SzervezoiRegisterActivity"
-    >
+    tools:context=".SzervezoiRegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,8 +16,7 @@
         <com.gubo.duszaverseny.components.BackButton
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:layout_margin="16dp"
-            />
+            android:layout_margin="16dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -47,8 +44,7 @@
             android:textSize="22sp"
             android:layout_marginStart="30dp"
             android:textColor="@color/white"
-            android:fontFamily="sans-serif-light"
-            />
+            android:fontFamily="sans-serif-light" />
     </LinearLayout>
 
     <LinearLayout
@@ -57,67 +53,138 @@
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:orientation="vertical"
+        android:layout_centerInParent="true"
         >
 
-        <com.gubo.duszaverseny.components.WhiteCustomEditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/username"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginVertical="8dp"
-            android:fontFamily="sans-serif-light"
-            />
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_white_button">
 
-        <com.gubo.duszaverseny.components.WhiteCustomEditText
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/user"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/username"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:layout_marginStart="10dp"
+                android:background="@null" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/email"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginVertical="8dp"
-            />
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_white_button">
 
-        <com.gubo.duszaverseny.components.WhiteCustomEditText
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/email"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/email"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:layout_marginStart="10dp"
+                android:background="@null" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/szul_datum"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginVertical="8dp"
-            />
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_white_button">
 
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/date"
+                android:layout_marginStart="16dp" />
 
-        <com.gubo.duszaverseny.components.WhiteCustomEditText
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/szul_datum"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:layout_marginStart="10dp"
+                android:background="@null" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/nem"
+            android:layout_marginBottom="8dp"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginVertical="8dp"
-            />
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_white_button">
 
-        <com.gubo.duszaverseny.components.WhiteCustomEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/szervezoi_kod"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginVertical="8dp"
-            />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/admin"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/szervezoi_kod"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:layout_marginStart="10dp"
+                android:background="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom">
 
         <com.gubo.duszaverseny.components.BlueCustomButton
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/register"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="30dp"
-        />
-
-
+            android:layout_marginTop="30dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="horizontal"
-            android:layout_marginTop="29dp"
-            >
+            android:layout_marginTop="29dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -125,18 +192,14 @@
                 android:text="@string/account_exist"
                 android:layout_marginHorizontal="16dp"
                 android:gravity="center"
-                android:textColor="@color/primaryVariant"/>
+                android:textColor="@color/primaryVariant" />
 
-        <com.gubo.duszaverseny.components.BasicCustomButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="android:attr/borderlessButtonStyle"
-            android:text="@string/pleasesignin"
-            android:textColor="@color/primaryVariant"
-            />
-
-
-
+            <com.gubo.duszaverseny.components.BasicCustomButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="android:attr/borderlessButtonStyle"
+                android:text="@string/pleasesignin"
+                android:textColor="@color/primaryVariant" />
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
