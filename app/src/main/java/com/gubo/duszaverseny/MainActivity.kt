@@ -7,8 +7,10 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
 import com.gubo.duszaverseny.components.DropdownHelper
-import com.gubo.duszaverseny.database.configureDatabase
+import com.gubo.duszaverseny.database.DatabaseWorker
 import com.gubo.duszaverseny.databinding.ActivityMainBinding
 import com.gubo.duszaverseny.viewModels.MainViewModel
 
@@ -23,7 +25,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
-        configureDatabase()
+
+        val databaseWorkRequest = OneTimeWorkRequestBuilder<DatabaseWorker>().build()
+        WorkManager.getInstance(this).enqueue(databaseWorkRequest)
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

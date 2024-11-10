@@ -50,6 +50,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.work.runtime.ktx)
     implementation(libs.jbcrypt)
     implementation(libs.mysql.connector.java)
     implementation(libs.exposed.core)

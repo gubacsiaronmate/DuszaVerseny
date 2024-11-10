@@ -1,6 +1,7 @@
 package com.gubo.duszaverseny.viewModels
 
 import android.content.Context
+import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import android.widget.EditText
@@ -8,6 +9,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.core.view.children
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.gubo.duszaverseny.R
@@ -21,8 +23,13 @@ class VersenyzoiRegisterViewModel : ViewModel() {
     private val _versenyzok = MutableLiveData<MutableList<Student>>()
     val versenyzok: MutableLiveData<MutableList<Student>> = _versenyzok
 
+    fun updateVersenyzok(versenyzok: MutableList<Student>) {
+        _versenyzok.value = versenyzok
+    }
+
     private val nameEditTextId = View.generateViewId()
     private val gradeEditTextId = View.generateViewId()
+    private val secondLinLayoutId = View.generateViewId()
 
     fun getAddedTeamMateLinearLayout(context: Context, student: Student): LinearLayout = LinearLayout(context).apply {
         background = ContextCompat.getDrawable(context, R.drawable.rounded_white_button)
@@ -42,10 +49,15 @@ class VersenyzoiRegisterViewModel : ViewModel() {
             setTextColor(ContextCompat.getColor(context, R.color.hintText))
             text = student.sName
         })
+        addView(TextView(context).apply {
+            setTextColor(ContextCompat.getColor(context, R.color.hintText))
+            text = student.grade convertTo String::class
+        })
     }
 
-    private fun createLinearLayout(context: Context, imageRes: Int, hintRes: Int): LinearLayout =
+    private fun createLinearLayout(context: Context, imageRes: Int, hintRes: Int, givenId: Int, secondLinLayoutId: Int? = null): LinearLayout =
         LinearLayout(context).apply {
+            id = secondLinLayoutId ?: View.generateViewId()
             orientation = LinearLayout.HORIZONTAL
             val sizeInDp = 24
             val sizeInPx = TypedValue.applyDimension(
@@ -63,15 +75,21 @@ class VersenyzoiRegisterViewModel : ViewModel() {
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT
                 )
-                id = nameEditTextId
+                id = givenId
                 hint = context.getString(hintRes)
             })
         }
 
     fun getTeamMateDataUIGenerator(context: Context): LinearLayout = LinearLayout(context).apply {
+        R.id.versenyzoiRegisterLinearLayout = View.generateViewId()
+        id = R.id.versenyzoiRegisterLinearLayout
         orientation = LinearLayout.VERTICAL
-        addView(createLinearLayout(context, R.drawable.user, R.string.versenyzoName))
-        addView(createLinearLayout(context, R.drawable.school2, R.string.versenyzoGrade))
+
+        Log.d("Test", "nameEditTextId: $nameEditTextId")
+        Log.d("Test", "gradeEditTextId: $gradeEditTextId")
+
+        addView(createLinearLayout(context, R.drawable.user, R.string.versenyzoName, nameEditTextId))
+        addView(createLinearLayout(context, R.drawable.school2, R.string.versenyzoGrade, gradeEditTextId, secondLinLayoutId))
         addView(BlueCustomButton(context).apply {
             layoutParams = LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
@@ -85,13 +103,17 @@ class VersenyzoiRegisterViewModel : ViewModel() {
             setPadding(12, 12, 12, 12)
             text = context.getString(R.string.submit_btn)
             setOnClickListener {
-                _versenyzok.value?.add(
-                    Student(
-                        getStudents().last().id + 1,
-                        findViewById<EditText>(nameEditTextId).text.toString(),
-                        findViewById<EditText>(gradeEditTextId).text convertTo Int::class
-                    )
-                )
+                val linLayout = this.parent as LinearLayout
+                val sName = linLayout.children.first().findViewById<EditText>(nameEditTextId).text.toString()
+                val grade = linLayout.children.find { it -> it.id == secondLinLayoutId }
+                    ?.findViewById<EditText>(gradeEditTextId)?.text.toString() convertTo Int::class
+
+                Log.d("Test", "sName: $sName")
+                Log.d("Test", "grade: $grade")
+
+                val student = Student(getStudents().last().id + 1, sName, grade)
+                _versenyzok.value?.add(student)
+                getAddedTeamMateLinearLayout(context, student)
             }
         })
     }

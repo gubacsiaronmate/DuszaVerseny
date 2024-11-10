@@ -6,4 +6,6 @@
     <item name="versenyzoGrade2" type="id"/>
     <item name="versenyzoName3" type="id"/>
     <item name="versenyzoGrade3" type="id"/>
+
+    <item name="versenyzoiRegisterLinearLayout" type="id"/>
 </resources>
