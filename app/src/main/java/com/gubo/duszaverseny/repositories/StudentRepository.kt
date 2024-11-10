@@ -2,6 +2,8 @@ package com.gubo.duszaverseny.repositories
 
 import com.gubo.duszaverseny.data.Student
 import com.gubo.duszaverseny.database.Students
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.deleteWhere
 import org.jetbrains.exposed.sql.insert
@@ -9,14 +11,17 @@ import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
 import org.jetbrains.exposed.sql.update
 
-fun getStudents(): List<Student> = transaction{
-    val students = Students.selectAll()
-    return@transaction students.map {
-        Student(
-            id = it[Students.id],
-            sName = it[Students.sName],
-            grade = it[Students.grade]
-        )
+suspend fun getStudents(): List<Student> =
+    withContext(Dispatchers.IO) {
+    return@withContext transaction {
+        val students = Students.selectAll()
+        return@transaction students.map {
+            Student(
+                id = it[Students.id],
+                sName = it[Students.sName],
+                grade = it[Students.grade]
+            )
+        }
     }
 }
 

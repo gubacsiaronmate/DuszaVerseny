@@ -12,12 +12,14 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.gubo.duszaverseny.R
 import com.gubo.duszaverseny.components.BlueCustomButton
 import com.gubo.duszaverseny.components.TransparentCustomEditText
 import com.gubo.duszaverseny.data.Student
 import com.gubo.duszaverseny.repositories.getStudents
 import com.gubo.duszaverseny.util.convertTo
+import kotlinx.coroutines.launch
 
 class VersenyzoiRegisterViewModel : ViewModel() {
     private val _versenyzok = MutableLiveData<MutableList<Student>>()
@@ -111,7 +113,11 @@ class VersenyzoiRegisterViewModel : ViewModel() {
                 Log.d("Test", "sName: $sName")
                 Log.d("Test", "grade: $grade")
 
-                val student = Student(getStudents().last().id + 1, sName, grade)
+                var student: Student = Student(0, "", 0)
+
+                viewModelScope.launch {
+                    student = Student(getStudents().last().id + 1, sName, grade)
+                }
                 _versenyzok.value?.add(student)
                 getAddedTeamMateLinearLayout(context, student)
             }
