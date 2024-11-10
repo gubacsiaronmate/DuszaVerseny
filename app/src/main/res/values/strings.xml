@@ -40,4 +40,10 @@
     <string name="jelhatido">Jelentkezési Határidő</string>
     <string name="submit_btn">Mentés</string>
     <string name="down_arrow">Down Arrow</string>
+    <string name="iskolai_title">Iskolai</string>
+    <string name="Iskola">Iskola</string>
+    <string name="Iskolalocation">Iskola címe</string>
+    <string name="kapcstneve">Kapcsolattartó neve</string>
+    <string name="kapcstemail">Kapcsolattartó E-mail-címe</string>
+    <string name="kapcstfhneve">Kapcsolattartó felhasználóneve</string>Iskolai/string>
 </resources>

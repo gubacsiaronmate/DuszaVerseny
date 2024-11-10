@@ -76,71 +76,20 @@
                 android:layout_marginStart="10dp"
                 android:background="@null" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginHorizontal="32dp"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:gravity="center"
-            android:background="@drawable/rounded_white_button">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/password"
-                android:layout_marginStart="16dp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/password"
-                android:textAlignment="textStart"
-                android:gravity="start"
-                android:layout_marginStart="10dp"
-                android:background="@null" />
-        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginBottom="36dp"
         android:layout_alignParentBottom="true"
         android:gravity="bottom">
 
         <com.gubo.duszaverseny.components.BlueCustomButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="30dp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:layout_marginTop="29dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/account_exist"
-                android:layout_marginHorizontal="16dp"
-                android:gravity="center"
-                android:textColor="@color/primaryVariant" />
-
-            <com.gubo.duszaverseny.components.BasicCustomButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="android:attr/borderlessButtonStyle"
-                android:stateListAnimator="@null"
-                android:text="@string/pleasesignin"
-                android:textColor="@color/primaryVariant" />
-        </LinearLayout>
+            android:text="@string/login"
+            android:layout_marginHorizontal="16dp"/>
     </LinearLayout>
 </RelativeLayout>

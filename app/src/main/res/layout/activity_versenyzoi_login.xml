@@ -111,37 +111,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        android:gravity="bottom">
+        android:gravity="bottom"
+        android:layout_marginBottom="36dp">
 
         <com.gubo.duszaverseny.components.BlueCustomButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="30dp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:layout_marginTop="29dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/account_exist"
-                android:layout_marginHorizontal="16dp"
-                android:gravity="center"
-                android:textColor="@color/primaryVariant" />
-
-            <com.gubo.duszaverseny.components.BasicCustomButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="android:attr/borderlessButtonStyle"
-                android:stateListAnimator="@null"
-                android:text="@string/pleasesignin"
-                android:textColor="@color/primaryVariant" />
-        </LinearLayout>
+            android:text="@string/login"
+            android:layout_marginHorizontal="16dp"/>
     </LinearLayout>
 </RelativeLayout>
