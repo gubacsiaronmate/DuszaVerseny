@@ -197,6 +197,7 @@
             <com.gubo.duszaverseny.components.BasicCustomButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:stateListAnimator="@null"
                 style="android:attr/borderlessButtonStyle"
                 android:text="@string/pleasesignin"
                 android:textColor="@color/primaryVariant" />

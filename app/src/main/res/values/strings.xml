@@ -45,5 +45,7 @@
     <string name="Iskolalocation">Iskola címe</string>
     <string name="kapcstneve">Kapcsolattartó neve</string>
     <string name="kapcstemail">Kapcsolattartó E-mail-címe</string>
-    <string name="kapcstfhneve">Kapcsolattartó felhasználóneve</string>Iskolai/string>
+    <string name="kapcstfhneve">Kapcsolattartó felhasználóneve</string>
+    <string name="iskolakezeles">Iskolák kezelése</string>
+    <string name="iskolareg">Új iskola regisztrálása</string>
 </resources>
