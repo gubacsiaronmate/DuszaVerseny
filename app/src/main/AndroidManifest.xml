@@ -13,17 +13,33 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.DuszaVerseny">
         <activity
-            android:name=".VersenyzoiRegisterActivity"
+            android:name=".EmailVerifyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IskolaiLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IskolaiRegisterActivity"
             android:exported="false" />
         <activity
             android:name=".SzervezoiFeluletActivity"
+            android:exported="false" />
+        <activity android:name=".SzervezoiLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SzervezoiRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VersenyzoiLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VersenyzoiRegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

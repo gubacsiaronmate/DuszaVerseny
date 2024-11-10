@@ -15,7 +15,7 @@
         android:background="@drawable/rounded_box_lnr_invert"
         android:orientation="vertical">
 
-        <com.gubo.duszaverseny.components.backButton
+        <com.gubo.duszaverseny.components.BackButton
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_margin="16dp"
@@ -120,7 +120,7 @@
         </LinearLayout>
 
 
-        <com.gubo.duszaverseny.components.blueCustomButton
+        <com.gubo.duszaverseny.components.BlueCustomButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/register"
@@ -145,7 +145,7 @@
                 android:gravity="center"
                 android:textColor="@color/primaryVariant"/>
 
-            <com.gubo.duszaverseny.components.basicCustomButton
+            <com.gubo.duszaverseny.components.BasicCustomButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:stateListAnimator="@null"

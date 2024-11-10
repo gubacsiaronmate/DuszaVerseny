@@ -119,7 +119,7 @@
         </LinearLayout>
 
 
-        <com.gubo.duszaverseny.components.blueCustomButton
+        <com.gubo.duszaverseny.components.BlueCustomButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/register"
@@ -144,7 +144,7 @@
                 android:gravity="center"
                 android:textColor="@color/primaryVariant"/>
 
-            <com.gubo.duszaverseny.components.basicCustomButton
+            <com.gubo.duszaverseny.components.BasicCustomButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:stateListAnimator="@null"

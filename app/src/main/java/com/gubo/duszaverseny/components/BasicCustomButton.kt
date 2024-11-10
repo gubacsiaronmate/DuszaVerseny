@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import com.gubo.duszaverseny.R
 
-class basicCustomButton(context: Context, attrs: AttributeSet) :
+class BasicCustomButton(context: Context, attrs: AttributeSet) :
     androidx.appcompat.widget.AppCompatButton(context, attrs) {
     init {
         setBackgroundColor(context.getColor(R.color.white))

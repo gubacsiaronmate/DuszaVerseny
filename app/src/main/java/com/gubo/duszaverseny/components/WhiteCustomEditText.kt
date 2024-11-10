@@ -2,18 +2,20 @@ package com.gubo.duszaverseny.components
 
 import android.content.Context
 import android.util.AttributeSet
-import androidx.appcompat.content.res.AppCompatResources
+import androidx.appcompat.widget.AppCompatEditText
+import androidx.core.content.ContextCompat
 import com.gubo.duszaverseny.R
 
-class blueCustomEditText(context: Context, attrs: AttributeSet):
-    androidx.appcompat.widget.AppCompatEditText(context, attrs) {
+class WhiteCustomEditText(context: Context, attrs: AttributeSet) :
+    AppCompatEditText(context, attrs) {
+
     init {
         setPadding(32, 32, 32, 32)
-        background = AppCompatResources.getDrawable(context, R.drawable.rounded_blue_button)
+        background = ContextCompat.getDrawable(context, R.drawable.rounded_white_button)
         inputType = android.text.InputType.TYPE_CLASS_TEXT
         textAlignment = TEXT_ALIGNMENT_CENTER
         gravity = android.view.Gravity.CENTER
         textSize = 22f
-        setTextColor(context.getColor(R.color.white))
+        setTextColor(context.getColor(R.color.primaryVariant))
     }
 }

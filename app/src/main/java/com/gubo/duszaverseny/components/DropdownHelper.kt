@@ -1,27 +1,28 @@
 package com.gubo.duszaverseny.components
 
 import android.content.Context
+import android.util.Log
 import android.view.MenuItem
-import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.PopupMenu
+import android.widget.TextView
 import com.gubo.duszaverseny.R
 
 class DropdownHelper {
-    fun showDropdown(context: Context, button: Button) {
-        val popupMenu = PopupMenu(context, button)
+    fun showDropdown(context: Context, linearLayout: LinearLayout, callback: (String) -> Unit) {
+        val popupMenu = PopupMenu(context, linearLayout)
 
-        // Inflate the menu with options
         val inflater = popupMenu.menuInflater
         inflater.inflate(R.menu.landing_dropdown, popupMenu.menu)
 
-        // Handle item clicks in the dropdown
         popupMenu.setOnMenuItemClickListener { item: MenuItem ->
-            // Change the button text to the selected item
-            button.text = item.title
+            linearLayout.findViewById<TextView>(R.id.selectorText).text = item.title
+            val chosenActivity = item.title.toString()
+            Log.d("Test", "(DropdownHelper) Chosen activity: $chosenActivity")
+            callback(chosenActivity)
             true
         }
 
-        // Show the PopupMenu
         popupMenu.show()
     }
 }

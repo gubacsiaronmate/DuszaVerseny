@@ -6,7 +6,7 @@ import androidx.appcompat.widget.AppCompatImageButton
 import androidx.appcompat.content.res.AppCompatResources
 import com.gubo.duszaverseny.R
 
-class deleteButton(context: Context, attrs: AttributeSet) :
+class DeleteButton(context: Context, attrs: AttributeSet) :
     AppCompatImageButton(context, attrs) {
     init {
         setImageDrawable(AppCompatResources.getDrawable(context, R.drawable.delete))

@@ -101,7 +101,7 @@
             </LinearLayout>
 
 
-            <com.gubo.duszaverseny.components.whiteCustomButton
+            <com.gubo.duszaverseny.components.WhiteCustomButton
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="@string/submit"

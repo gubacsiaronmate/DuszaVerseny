@@ -60,11 +60,12 @@
                 >
 
                 <TextView
+                    android:id="@+id/selectorText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/selector"
                     android:textColor="@color/primaryVariant"
-                    android:textSize="30dp"
+                    android:textSize="30sp"
                     android:gravity="center"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
@@ -73,6 +74,7 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
+                    android:contentDescription="@string/down_arrow"
                     android:src="@drawable/downarrow"
                     android:layout_marginEnd="16dp"
                     />
@@ -81,7 +83,8 @@
 
 
 
-            <com.gubo.duszaverseny.components.blueCustomButton
+            <com.gubo.duszaverseny.components.BlueCustomButton
+                android:id="@+id/loginButton"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="@string/login"
@@ -89,7 +92,8 @@
                 android:layout_marginBottom="16dp"
             />
 
-            <com.gubo.duszaverseny.components.blueCustomButton
+            <com.gubo.duszaverseny.components.BlueCustomButton
+                android:id="@+id/registerButton"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="@string/register"

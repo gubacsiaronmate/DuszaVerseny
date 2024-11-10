@@ -39,4 +39,5 @@
     <string name="katergoria">Kategóriák</string>
     <string name="jelhatido">Jelentkezési Határidő</string>
     <string name="submit_btn">Mentés</string>
+    <string name="down_arrow">Down Arrow</string>
 </resources>
